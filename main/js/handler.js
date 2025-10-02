@@ -1,5 +1,6 @@
 import {validateInputForm} from "./inputFormValidation.js";
 import {calcY, calcS} from "./mathFunction.js";
+import {task2} from "./task2/task2.js";
 
 export function inputHandler() {
     try {
@@ -39,4 +40,9 @@ export function promptHandler() {
         document.getElementById("promptResult").style.color = "red";
         document.getElementById("promptResult").innerText = `${err.message}`;
     }
+}
+
+export function task2Handler() {
+    const size = Number(document.getElementById("sizeInput").value);
+    task2(size);
 }
